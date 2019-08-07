@@ -1,0 +1,4 @@
+[submodule "trunk/live/repo/socket.io"]
+	path = trunk/live/repo/socket.io
+	url = https://github.com/daimaqiao/socket.io.git
+	branch = local_edit
