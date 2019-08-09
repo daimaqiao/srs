@@ -27,4 +27,11 @@ cd trunk/live && ./chat.sh
 启动live test服务（默认使用8080端口）：  
 cd trunk && ./live.sh  
   
+添加基于token认证的回调：  
+推流到rtmp的时候添加参数“publish=test2019081713002130”  
+比如：rtmp://192.168.0.240/live/livestream?publish=test2019081713002130  
+播放rtmp的时候添加参数“play=test”  
+比如：rtmp://192.168.0.240/live/livestream?play=test  
+  
+添加flv.js播放flv源。   
   

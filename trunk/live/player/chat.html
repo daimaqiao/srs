@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Live test chat</title>
+</head>
+
+<body>
+  <p>
+  <iframe id="chatFrame" frameborder="1" scrolling="auto" width="100%" height="400px">
+  </iframe>
+  </p>
+
+  <script type="text/javascript">
+	var hostname= window.location.hostname
+	document.getElementById("chatFrame").src="http://"+hostname+":3000";
+  </script>
+
+</body>
