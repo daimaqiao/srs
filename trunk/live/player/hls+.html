@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet">
+
+  <script src="https://cdn.bootcss.com/hls.js/0.12.4/hls.min.js"></script>
+
+  <title>Live test hls+hls.js</title>
+
+  <style>
+  .mainContainer {
+  	display: block;
+  	width: 1024px;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+  
+  .centeredVideo {
+  	display: block;
+  	width: 100%;
+  	height: 576px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom: auto;
+  }
+  </style>
+
+</head>
+
+<body>
+  <p>
+  <div id="mainContainer" class="mainContainer">
+  <video id='my-video' class='video-js centeredVideo' controls poster='/poster/live.jpg'>
+    <source id="source" src="/live/obs.m3u8" type="application/x-mpegURL">  
+    <p class='vjs-no-js'>
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+    </p>
+  </video>
+  </div>
+  </p>
+
+  <script>
+    var video = document.getElementById('video');
+    if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      console.log("play type: application/vnd.apple.mpegurl.");
+      video.src = '/live/obs.m3u8';
+    }
+    else if(Hls.isSupported()) {
+      console.log("hls(js) is supported.");
+      var hls = new Hls();
+      hls.loadSource('/live/obs.m3u8');
+      hls.attachMedia(video);
+    }
+    else {
+        window.location.replace("hls.html");
+    }
+  </script>
+
+</body>
