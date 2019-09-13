@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
   <script src="https://cdn.bootcss.com/flv.js/1.5.0/flv.min.js"></script>
@@ -40,7 +41,7 @@
 		*/
 		var flvPlayer = flvjs.createPlayer({
 			type: 'flv',
-            url: '/live/obs.flv?play=test'
+            url: '/live/livestream.flv?play=test'
 		});
 		flvPlayer.attachMediaElement(videoElement);
 		flvPlayer.load();
@@ -48,3 +49,4 @@
   </script>
 
 </body>
+</html>

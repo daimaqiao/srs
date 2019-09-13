@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
 
@@ -39,7 +40,7 @@
     if(Hls.isSupported()) {
       console.log("hls is supported.");
       var hls = new Hls();
-      hls.loadSource('/live/obs.m3u8');
+      hls.loadSource('/live/livestream.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED,function() {
         //video.play();
@@ -52,7 +53,7 @@
    // white-list before a 'canplay' event will be emitted; the last video event that can be reliably listened-for when the URL is not on the white-list is 'loadedmetadata'.
     else if (video.canPlayType('application/vnd.apple.mpegurl')) {
       console.log("play type: application/vnd.apple.mpegurl.");
-      video.src = '/live/obs.m3u8';
+      video.src = '/live/livestream.m3u8';
       video.addEventListener('loadedmetadata',function() {
         //video.play();
       });
@@ -60,4 +61,4 @@
   </script>
 
 </body>
-
+</html>
