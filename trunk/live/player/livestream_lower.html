@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
 
   <script src="https://cdn.bootcss.com/hls.js/0.12.4/hls.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="counter.js"></script>
 
-  <title>Live hls test(v3)</title>
+  <title>Livestream_lower test(v3)</title>
 
   <style>
   .mainContainer {
@@ -30,25 +32,29 @@
 <body>
   <p>
   <div id="mainContainer" class="mainContainer">
-  <video id='video' class="centeredVideo" controls poster='/poster/live.jpg'>
+  <video id='video' class="centeredVideo" controls poster='/poster/live.jpg' onplay="countPlayer()">
   </video>
   </div>
+  </p>
+
+  <p>
+  <span id="out"></span>
   </p>
 
   <script>
     var video = document.getElementById('video');
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
       console.log("play type: application/vnd.apple.mpegurl.");
-      video.src = '/live/livestream.m3u8';
+      video.src = '/live/livestream_lower.m3u8';
     }
     else if(Hls.isSupported()) {
       console.log("hls(js) is supported.");
       var hls = new Hls();
-      hls.loadSource('/live/livestream.m3u8');
+      hls.loadSource('/live/livestream_lower.m3u8');
       hls.attachMedia(video);
     }
     else {
-      // FIXME
+	// FIXME
     }
   </script>
 

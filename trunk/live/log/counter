@@ -1,0 +1,42 @@
+
+> simple-counter@0.0.0 start /home/daimaqiao/srs/trunk/live/counter/simple_counter
+> node ./bin/www "srs-live-counter"
+
+auto_count: 0 --> 1
+[0mGET /counter/auto_count?origin=http%3A%2F%2Fics.daimaqiao.net%3A18080%2Flivestream_lower.html [32m200 [0m9.630 ms - 1[0m
+auto_count: 1 --> 2
+[0mGET /counter/auto_count?origin=http%3A%2F%2Fics.daimaqiao.net%3A18080%2Flivestream_lower.html [32m200 [0m1.754 ms - 1[0m
+auto_count: 2 --> 3
+[0mGET /counter/auto_count?origin=http%3A%2F%2Fics.daimaqiao.net%3A18080%2Flivestream_lower.html [32m200 [0m1.008 ms - 1[0m
+auto_count: 3 --> 4
+[0mGET /counter/auto_count [32m200 [0m0.810 ms - 1[0m
+auto_count: 4 --> 5
+[0mGET /counter/auto_count [32m200 [0m0.732 ms - 1[0m
+auto_count: 5 --> 6
+[0mGET /counter/auto_count [32m200 [0m0.695 ms - 1[0m
+auto_count: 6 --> 7
+[0mGET /counter/auto_count?origin=http%3A%2F%2Fics.daimaqiao.net%3A18080%2Flivestream_lower.html [32m200 [0m0.835 ms - 1[0m
+auto_count: 7 --> 8
+[0mGET /counter/auto_count?origin=http%3A%2F%2Fics.daimaqiao.net%3A18080%2Flivestream_lower.html [32m200 [0m0.830 ms - 1[0m
+auto_count: 8 --> 9
+[0mGET /counter/auto_count?origin=http%3A%2F%2Fics.daimaqiao.net%3A18080%2Flivestream_lower.html [32m200 [0m0.716 ms - 1[0m
+auto_count: 9 --> 10
+[0mGET /counter/auto_count?origin=http%3A%2F%2Fics.daimaqiao.net%3A18080%2Flivestream_lower.html [32m200 [0m1.563 ms - 2[0m
+auto_count: 10 --> 11
+[0mGET /counter/auto_count?origin=http%3A%2F%2Fics.daimaqiao.net%3A18080%2Flivestream_lower.html [32m200 [0m0.906 ms - 2[0m
+auto_count: 11 --> 12
+[0mGET /counter/auto_count?origin=http%3A%2F%2Fics.daimaqiao.net%3A18080%2Flivestream_lower.html [32m200 [0m0.734 ms - 2[0m
+auto_count: 12 --> 13
+[0mGET /counter/auto_count?origin=http%3A%2F%2F122.114.149.146%3A18080%2Flivestream_lower.html [32m200 [0m1.666 ms - 2[0m
+auto_count: 13 --> 14
+[0mGET /counter/auto_count?origin=http%3A%2F%2F122.114.149.146%3A18080%2Flivestream_lower.html [32m200 [0m0.841 ms - 2[0m
+auto_count: 14 --> 15
+[0mGET /counter/auto_count?origin=http%3A%2F%2F122.114.149.146%3A18080%2Flivestream_lower.html [32m200 [0m0.782 ms - 2[0m
+auto_count: 15 --> 16
+[0mGET /counter/auto_count?origin=http%3A%2F%2F122.114.149.146%3A18080%2Flivestream_lower.html [32m200 [0m1.536 ms - 2[0m
+auto_count: 16 --> 17
+[0mGET /counter/auto_count?origin=http%3A%2F%2F122.114.149.146%3A18080%2Flivestream.html [32m200 [0m1.550 ms - 2[0m
+auto_count: 17 --> 18
+[0mGET /counter/auto_count?origin=http%3A%2F%2F122.114.149.146%3A18080%2Flivestream.html [32m200 [0m0.939 ms - 2[0m
+auto_count: 18 --> 19
+[0mGET /counter/auto_count?origin=http%3A%2F%2F122.114.149.146%3A18080%2Flivestream_lower.html [32m200 [0m0.803 ms - 2[0m

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-NODE=`ps aux |grep "node .* srs-live-[chat|auth]" |grep -v grep |grep node |awk '{print $2}'`
+NODE=`ps aux |grep "node .* srs-live-[chat|auth|counter]" |grep -v grep |grep node |awk '{print $2}'`
 #[ -n "$NODE" ] && "kill node ..." && echo $NODE|xargs kill
 [ -n "$NODE" ] && echo "kill node $NODE ..." && echo $NODE|xargs kill
 
