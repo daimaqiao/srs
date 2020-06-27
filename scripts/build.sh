@@ -22,3 +22,7 @@ cd $SCRIPTS
 FFMPEG=ffmpeg-4.1-bin
 [ ! -e ../../$FFMPEG ] && \
 ln -s ../../$FFMPEG ../local/objs/$FFMPEG
+
+HOME_DIR=../local/objs/nginx/html
+mkdir -p $HOMNE_DIR
+cp -R ../home/* $HOME_DIR/
