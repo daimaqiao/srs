@@ -33,3 +33,8 @@
 .idea
 .DS_Store
 
+# loal
+local/
+logs/
+*.pid
+
