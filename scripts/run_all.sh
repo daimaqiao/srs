@@ -6,7 +6,7 @@ ME=`realpath $0`
 SCRIPTS=`dirname $ME`
 ROOT=`dirname $SCRIPTS`
 
-ALL="live live-edge"
+ALL="live-push live live-edge"
 
 for one in $ALL; do
 	$ROOT/$one/run.sh
