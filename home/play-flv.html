@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="js/flv.js/1.5.0/flv.min.js"></script>
+  <script src="js/jquery/3.4.1/jquery.min.js"></script>
+  <title>play-flv</title>
+
+  <style>
+  .mainContainer {
+  	display: block;
+  	width: 1024px;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+  
+  .centeredVideo {
+  	display: block;
+  	height: 576px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom: auto;
+  }
+  </style>
+
+</head>
+
+<!-- play-flv -->
+<body>
+	<p>
+	<div id="mainContainer" class="mainContainer">
+    	<video id="video" class="centeredVideo" controls poster='/poster/live.jpg'>Your browser is too old which doesn't support HTML5 video.</video>
+	</div>
+	</p>
+
+	<script type="text/javascript">
+
+    function getSrc() {
+        var channel = 'live';
+        var room = 'play';
+        var query = window.location.search.substring(1);
+		var param = new Array();
+        var args = query.split('&');
+        for (var i = 0; i < args.length; i++) {
+            var pair = args[i].split('=');
+            if (pair[0] === 'channel') {
+                channel = pair[1];
+            } else if(pair[0] === 'room') {
+                room = pair[1];
+			} else {
+				param.push(args[i]);
+			}
+        }// for
+        var src = '/'+channel+'/'+room+'.flv';
+		if(param.length > 0)
+			src += '?' + param.join('&');
+        document.title = channel+'-'+room;
+        console.log('title:', document.title);
+        console.log('url:', window.location.href);
+        console.log('src:', src);
+        return src; 
+    }
+
+	if (flvjs.isSupported()) {
+		console.log("flv(js) is supported.");
+		var video= document.getElementById('video');
+		var flvPlayer = flvjs.createPlayer({
+			type: 'flv',
+            url: getSrc()
+		});
+		flvPlayer.attachMediaElement(video);
+		flvPlayer.load();
+	} else {
+	// FIXME
+	}
+
+	</script>
+
+</body>
+</html>
