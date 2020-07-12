@@ -37,4 +37,5 @@
 local/
 logs/
 *.pid
+temp/
 
