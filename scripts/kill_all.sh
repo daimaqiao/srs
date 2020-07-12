@@ -6,7 +6,7 @@ ME=`realpath $0`
 SCRIPTS=`dirname $ME`
 ROOT=`dirname $SCRIPTS`
 
-ALL="live-push live live-edge"
+ALL="live-push live live-aac live-edge live-dvr"
 
 for one in $ALL; do
 	$ROOT/$one/kill.sh
